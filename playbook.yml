@@ -1,5 +1,5 @@
 - name: Выполнение Bash-скрипта на удаленных хостах
-  hosts: main
+  hosts: cloudblast
   tasks:
     - name: Копирование и выполнение скрипта
       script: install_warp.sh
