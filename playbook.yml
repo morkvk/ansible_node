@@ -1,5 +1,5 @@
 - name: Выполнение Bash-скрипта на удаленных хостах
-  hosts: 89.34.230.162
+  hosts: all
   tasks:
     - name: Копирование и выполнение скрипта
       script: install_warp.sh
