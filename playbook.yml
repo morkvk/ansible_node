@@ -2,4 +2,4 @@
   hosts: main
   tasks:
     - name: Копирование и выполнение скрипта
-      script: warp_install.sh
+      script: install_warp.sh
