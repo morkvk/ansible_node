@@ -1,5 +1,9 @@
-- name: Выполнение Bash-скрипта на удаленных хостах
+all:
+  name: Выполнение Bash-скрипта на удаленных хостах
   hosts: cloudblast
-  tasks:
-    - name: Копирование и выполнение скрипта
-      script: install_warp.sh
+    89.34.230.162:
+      - name: Выполнение Bash-скрипта на удаленных хостах
+        hosts: cloudblast
+        tasks:
+          - name: Копирование и выполнение скрипта
+            script: install_warp.sh
