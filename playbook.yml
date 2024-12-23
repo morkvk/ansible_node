@@ -1,0 +1,5 @@
+- name: Выполнение Bash-скрипта на удаленных хостах
+  hosts: main
+  tasks:
+    - name: Копирование и выполнение скрипта
+      script: warp_install.sh
