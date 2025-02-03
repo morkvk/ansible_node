@@ -1,5 +1,11 @@
-- name: Выполнение Bash-скрипта на удаленных хостах
+- name: Проверка статуса UFW на удаленных хостах
   hosts: all
+  become: yes  # Используйте sudo для выполнения команд
   tasks:
-    - name: Копирование и выполнение скрипта
-      script: install_warp.sh
+    - name: Проверка статуса UFW
+      command: ufw status
+      register: ufw_status
+
+    - name: Вывод статуса UFW
+      debug:
+        var: ufw_status.stdout
