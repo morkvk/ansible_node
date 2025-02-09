@@ -1,0 +1,12 @@
+---
+- name: Проверка статуса UFW
+  hosts: all
+  become: yes  # Повышение привилегий до root (так как ufw требует прав администратора)
+  tasks:
+    - name: Проверка статуса UFW
+      command: ufw status
+      register: ufw_status
+
+    - name: Вывод статуса UFW
+      debug:
+        var: ufw_status.stdout
